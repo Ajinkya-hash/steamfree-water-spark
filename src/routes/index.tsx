@@ -97,7 +97,7 @@ function Home() {
             <ul className="mt-6 space-y-3 font-mono text-sm">
               <li className="flex gap-3"><span className="text-[var(--aqua)]">→</span> No boiler. No steam line. No cooling tower load.</li>
               <li className="flex gap-3"><span className="text-[var(--aqua)]">→</span> Electric drive · variable speed · remote monitored.</li>
-              <li className="flex gap-3"><span className="text-[var(--aqua)]">→</span> Recovers latent heat at >85% efficiency.</li>
+              <li className="flex gap-3"><span className="text-[var(--aqua)]">→</span> Recovers latent heat at &gt;85% efficiency.</li>
             </ul>
           </div>
           <div className="reveal card-tech p-6 md:p-8 bg-card">

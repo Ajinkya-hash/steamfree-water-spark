@@ -1,11 +1,20 @@
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" aria-hidden>
-        <rect x="1" y="1" width="38" height="38" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M10 26 Q 14 14, 20 20 T 30 14" stroke="var(--aqua)" strokeWidth="2" fill="none" strokeLinecap="round" />
-        <circle cx="30" cy="14" r="2.5" fill="var(--aqua)" />
-        <path d="M8 32h24" stroke="currentColor" strokeWidth="1" opacity="0.4" />
+      <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden>
+        <rect x="2" y="2" width="36" height="36" rx="3" stroke="#1FB6C9" strokeWidth="2" fill="none" />
+        <polyline
+          points="8,28 14,22 20,26 26,16 32,20"
+          stroke="#1FB6C9"
+          strokeWidth="2.5"
+          fill="none"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <circle cx="14" cy="22" r="2" fill="#1FB6C9" />
+        <circle cx="20" cy="26" r="2" fill="#1FB6C9" />
+        <circle cx="26" cy="16" r="2" fill="#1FB6C9" />
+        <circle cx="32" cy="20" r="2" fill="#1FB6C9" />
       </svg>
       <div className="leading-tight">
         <div className="font-display text-[15px] font-semibold tracking-tight">GATIMAAN</div>

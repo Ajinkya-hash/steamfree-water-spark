@@ -6,9 +6,9 @@ export function Logo({ className = "" }: { className?: string }) {
       <img
         src={logoAsset.url}
         alt="Gatimaan MVR Engineering"
-        width="40"
-        height="40"
-        className="h-9 w-9 object-contain"
+        width="44"
+        height="44"
+        className="h-11 w-11 object-contain"
       />
       <div className="leading-tight">
         <div className="font-display text-[15px] font-semibold tracking-tight">GATIMAAN</div>

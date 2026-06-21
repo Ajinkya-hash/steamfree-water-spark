@@ -158,6 +158,50 @@ function Home() {
 
       <ClientStrip />
 
+      {/* CASE STUDIES TEASER */}
+      <section className="py-24 bg-mist">
+        <div className="container-x">
+          <div className="flex flex-wrap items-end justify-between gap-6 mb-10 reveal">
+            <div>
+              <div className="eyebrow">Reference projects</div>
+              <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold max-w-2xl leading-tight">
+                Plants we've built. Numbers from live SCADA.
+              </h2>
+            </div>
+            <Link to="/case-studies" className="btn-ghost">
+              All case studies <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {[
+              { client: "Shree Gantex Processors", tag: "Textile · Surat", metric: ">360 KLD", sub: "98.8% recovery · 7–8 kWh/KL", slug: "shree-gantex" },
+              { client: "Huechem Global", tag: "Dye intermediates · Vatva", metric: "95% TDS", sub: "Titanium Gr-2 · zero ATFD", slug: "huechem-global" },
+              { client: "Veeral Organics", tag: "Speciality chem · Mahad", metric: "1L ppm COD", sub: "17.2 kWh/KL · ~98% recovery", slug: "veeral-organics" },
+              { client: "Necta Fresh Agro Foods", tag: "Liquid glucose · Jaspur", metric: "360 TPD", sub: "Zero colour · ROI <1 yr", slug: "nectafresh-glucose" },
+            ].map((c, i) => (
+              <Link
+                key={c.slug}
+                to="/case-studies"
+                hash={c.slug}
+                className="card-tech p-6 bg-card hover:border-[var(--aqua)] transition-colors reveal"
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--aqua-deep)]">
+                  {c.tag}
+                </div>
+                <div className="mt-3 font-display text-lg font-semibold leading-tight">
+                  {c.client}
+                </div>
+                <div className="mt-6 font-display text-3xl font-semibold text-foreground">
+                  {c.metric}
+                </div>
+                <div className="mt-1 text-xs text-muted-foreground">{c.sub}</div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 bg-background">
         <div className="container-x">

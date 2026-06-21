@@ -187,3 +187,6 @@
 
 @keyframes pulse-soft { 0%,100% { opacity: .5 } 50% { opacity: 1 } }
 .pulse-soft { animation: pulse-soft 2.4s ease-in-out infinite; }
+
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

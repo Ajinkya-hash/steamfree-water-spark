@@ -15,9 +15,9 @@ import veeralPdf from "@/assets/case-veeral.pdf.asset.json";
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Commissioned MVR & ZLD Plants | Gatimaan MVR Engineering" },
+      { title: "Success Stories — Commissioned MVR & ZLD Plants | Gatimaan MVR Engineering" },
       { name: "description", content: "Real commissioned MVR and Zero Liquid Discharge projects — textile, dye intermediates, speciality chemicals and food processing. Capacities, energy and recovery numbers from live SCADA." },
-      { property: "og:title", content: "Case Studies — Gatimaan MVR Engineering" },
+      { property: "og:title", content: "Success Stories — Gatimaan MVR Engineering" },
       { property: "og:description", content: "Commissioned MVR-ZLD plants from 72 to 360 KLD — zero steam, full SCADA, audited results." },
       { property: "og:image", content: gantexHero.url },
     ],
@@ -147,7 +147,7 @@ function CaseStudies() {
       {/* HERO */}
       <section className="hero-grad text-white py-20 md:py-28">
         <div className="container-x">
-          <div className="eyebrow text-[var(--aqua)]">Case studies</div>
+          <div className="eyebrow text-[var(--aqua)]">Success stories</div>
           <h1 className="mt-5 font-display text-4xl md:text-6xl font-semibold max-w-4xl leading-[1.05]">
             Plants we have built. Numbers from live SCADA.
           </h1>
@@ -179,7 +179,7 @@ function CaseStudies() {
                     loading="lazy"
                   />
                   <div className="absolute top-4 left-4 bg-background/85 backdrop-blur px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-foreground border border-border">
-                    Case · 0{i + 1}
+                    Story · 0{i + 1}
                   </div>
                 </div>
               </div>
@@ -235,7 +235,7 @@ function CaseStudies() {
                     rel="noreferrer"
                     className="btn-primary"
                   >
-                    Download case study PDF <Download className="h-4 w-4" />
+                    Download success story PDF <Download className="h-4 w-4" />
                   </a>
                   <Link to="/contact" className="btn-ghost">
                     Discuss a similar project

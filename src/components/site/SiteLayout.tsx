@@ -1,20 +1,19 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState, type ReactNode } from "react";
 import { Logo } from "./Logo";
-import { Menu, X, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Products" },
   { to: "/applications", label: "Applications" },
-  { to: "/case-studies", label: "Case Studies" },
+  { to: "/case-studies", label: "Success Stories" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
@@ -45,46 +44,22 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             : "bg-background border-transparent py-4"
         }`}
       >
-        <div className="container-x flex items-center justify-between">
-          <Link to="/" className="text-foreground"><Logo /></Link>
-          <nav className="hidden lg:flex items-center gap-1">
+        <div className="container-x flex items-center justify-between gap-4">
+          <Link to="/" className="text-foreground shrink-0"><Logo /></Link>
+          <nav className="flex items-center gap-0.5 sm:gap-1 overflow-x-auto no-scrollbar">
             {NAV.map((n) => (
               <Link
                 key={n.to}
                 to={n.to}
-                className="relative px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-                activeProps={{ className: "text-foreground after:content-[''] after:absolute after:left-4 after:right-4 after:bottom-1 after:h-px after:bg-[var(--aqua)]" }}
+                className="relative whitespace-nowrap px-2 sm:px-3 md:px-4 py-2 text-xs sm:text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                activeProps={{ className: "text-foreground after:content-[''] after:absolute after:left-2 after:right-2 after:bottom-1 after:h-px after:bg-[var(--aqua)]" }}
               >
                 {n.label}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary ml-3">Request a Quote</Link>
+            <Link to="/contact" className="btn-primary ml-1 sm:ml-3 text-xs sm:text-sm shrink-0">Request a Quote</Link>
           </nav>
-          <button
-            onClick={() => setOpen((v) => !v)}
-            className="lg:hidden p-2 text-foreground"
-            aria-label="Menu"
-          >
-            {open ? <X /> : <Menu />}
-          </button>
         </div>
-        {open && (
-          <div className="lg:hidden border-t border-border bg-background">
-            <div className="container-x flex flex-col py-3">
-              {NAV.map((n) => (
-                <Link
-                  key={n.to}
-                  to={n.to}
-                  onClick={() => setOpen(false)}
-                  className="py-3 text-sm font-medium border-b border-border/60 last:border-0"
-                >
-                  {n.label}
-                </Link>
-              ))}
-              <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-3 self-start">Request a Quote</Link>
-            </div>
-          </div>
-        )}
       </header>
 
       <main className="flex-1">{children}</main>

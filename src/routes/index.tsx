@@ -81,6 +81,26 @@ function Home() {
         </div>
       </section>
 
+      {/* HIGHLIGHTS */}
+      <section className="border-y border-border bg-background">
+        <div className="container-x py-10 md:py-14">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6">
+            {[
+              { sub: "Up to", value: "99.5%", label: "Water recovery" },
+              { sub: "Largest plant", value: "360", label: "KLD / TPD" },
+              { sub: "Served across", value: "8+", label: "Industries" },
+              { sub: "Continuous", value: "Zero", label: "Steam used" },
+            ].map((h) => (
+              <div key={h.label} className="text-center reveal">
+                <div className="font-mono text-[10px] uppercase tracking-[0.18em] text-muted-foreground">{h.sub}</div>
+                <div className="mt-1 font-display text-3xl md:text-4xl font-semibold text-[var(--aqua-deep)]">{h.value}</div>
+                <div className="mt-1 text-sm text-foreground">{h.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* STEAM vs MVR */}
       <section className="py-24 bg-mist">
         <div className="container-x grid lg:grid-cols-2 gap-14 items-center">
@@ -158,7 +178,7 @@ function Home() {
 
       <ClientStrip />
 
-      {/* CASE STUDIES TEASER */}
+      {/* SUCCESS STORIES TEASER */}
       <section className="py-24 bg-mist">
         <div className="container-x">
           <div className="flex flex-wrap items-end justify-between gap-6 mb-10 reveal">
@@ -169,7 +189,7 @@ function Home() {
               </h2>
             </div>
             <Link to="/case-studies" className="btn-ghost">
-              All case studies <ArrowRight className="h-4 w-4" />
+              All success stories <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">

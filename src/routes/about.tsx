@@ -3,7 +3,7 @@ import { SiteLayout } from "@/components/site/SiteLayout";
 import { Counter } from "@/components/site/Counter";
 import { useReveal } from "@/hooks/use-reveal";
 import { ShieldCheck, Cpu, FlaskConical, Headset } from "lucide-react";
-import scada from "@/assets/scada-panel.jpg";
+import alokAsset from "@/assets/alok-chauhan.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -98,21 +98,33 @@ function About() {
       <section className="py-24 bg-background">
         <div className="container-x grid lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-5 reveal">
-            <div className="card-tech overflow-hidden">
-              <img src={scada} alt="SCADA control panel" loading="lazy" className="w-full h-[420px] object-cover" />
+            <div className="card-tech overflow-hidden bg-mist">
+              <img src={alokAsset.url} alt="Mr. Alok Chauhan, Managing Director, Gatimaan MVR Engineering" loading="lazy" className="w-full h-[520px] object-cover object-top" />
             </div>
           </div>
           <div className="lg:col-span-7 reveal">
-            <div className="eyebrow">Leadership</div>
-            <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold">Mr. Alok Chauhan — Managing Director</h2>
+            <div className="eyebrow">Our Managing Director</div>
+            <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold">Mr. Alok Chauhan</h2>
             <p className="mt-5 text-muted-foreground">
-              B.Sc. (Physics, Chemistry, Mathematics) and ANSI in Sugar Technology. 14 years in sugar
-              manufacturing — rising to General Manager (Technical) at Wave Industries by 2012.
+              Mr. Chauhan holds a B.Sc. in Physics, Chemistry, and Mathematics, along with an ANSI in
+              Sugar Technology. He began his career in the sugar manufacturing industry, where he spent
+              14 years mastering plant operations and process optimization. By 2012, he had risen to the
+              position of General Manager (Technical) at Wave Industries, overseeing large-scale sugar
+              production facilities.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Transitioned to engineering, leading Design & Development at Spray Engineering Devices Ltd.
-              by 2020. Founded Gatimaan MVR Engineering the same year with a vision to revolutionise
-              industrial wastewater treatment through MVR technology.
+              In the next phase of his career, Mr. Chauhan transitioned into the engineering domain,
+              focusing on the development and deployment of energy-efficient machinery for sugar and
+              wastewater sectors. His leadership at Spray Engineering Devices Ltd. as Head of Design &
+              Development (by 2020) was marked by several successful implementations of advanced
+              process technologies.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              In late 2020, he embarked on his entrepreneurial journey, founding Gatimaan MVR
+              Engineering with a vision to revolutionize industrial wastewater treatment. Under his
+              guidance, the company has delivered high-performance MVR Evaporation systems for some
+              of the most challenging effluent profiles in the industry—setting new benchmarks in
+              sustainability and efficiency.
             </p>
           </div>
         </div>

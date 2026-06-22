@@ -97,12 +97,17 @@ function About() {
       {/* Leadership */}
       <section className="py-24 bg-background">
         <div className="container-x grid lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-5 reveal">
-            <div className="card-tech overflow-hidden bg-mist">
-              <img src={alokAsset.url} alt="Mr. Alok Chauhan, Managing Director, Gatimaan MVR Engineering" loading="lazy" className="w-full h-[520px] object-cover object-top" />
+          <div className="lg:col-span-4 reveal flex justify-center lg:justify-start">
+            <div className="overflow-hidden rounded-2xl shadow-lg w-full max-w-sm">
+              <img
+                src={alokAsset.url}
+                alt="Mr. Alok Chauhan, Managing Director, Gatimaan MVR Engineering"
+                loading="lazy"
+                className="w-full aspect-[3/4] object-cover object-center"
+              />
             </div>
           </div>
-          <div className="lg:col-span-7 reveal">
+          <div className="lg:col-span-8 reveal">
             <div className="eyebrow">Our Managing Director</div>
             <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold">Mr. Alok Chauhan</h2>
             <p className="mt-5 text-muted-foreground">

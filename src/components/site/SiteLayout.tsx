@@ -58,6 +58,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {n.label}
               </Link>
             ))}
+            <Link
+              to={CTA.to}
+              className="whitespace-nowrap ml-1 sm:ml-2 px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold rounded-md bg-[var(--aqua)] text-[#0b1d2a] hover:brightness-110 transition-all"
+              activeProps={{ className: "ring-2 ring-[var(--aqua)] ring-offset-1 ring-offset-background brightness-110" }}
+            >
+              {CTA.label}
+            </Link>
           </nav>
         </div>
       </header>

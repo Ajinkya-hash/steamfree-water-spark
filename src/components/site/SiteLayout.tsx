@@ -9,8 +9,9 @@ const NAV = [
   { to: "/applications", label: "Applications" },
   { to: "/case-studies", label: "Success Stories" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact / Quote" },
 ];
+
+const CTA = { to: "/contact", label: "Contact Us" };
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);
@@ -57,6 +58,13 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {n.label}
               </Link>
             ))}
+            <Link
+              to={CTA.to}
+              className="whitespace-nowrap ml-1 sm:ml-2 px-3 sm:px-4 py-2 text-xs sm:text-sm font-semibold rounded-md bg-[var(--aqua)] text-[#0b1d2a] hover:brightness-110 transition-all"
+              activeProps={{ className: "ring-2 ring-[var(--aqua)] ring-offset-1 ring-offset-background brightness-110" }}
+            >
+              {CTA.label}
+            </Link>
           </nav>
         </div>
       </header>
@@ -75,6 +83,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--aqua)] mb-4">Navigate</div>
             <ul className="space-y-2 text-sm">
               {NAV.map((n) => <li key={n.to}><Link to={n.to} className="hover:text-[var(--aqua)]">{n.label}</Link></li>)}
+              <li><Link to={CTA.to} className="hover:text-[var(--aqua)]">{CTA.label}</Link></li>
             </ul>
           </div>
           <div>

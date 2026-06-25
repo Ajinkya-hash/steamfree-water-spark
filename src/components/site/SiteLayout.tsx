@@ -9,7 +9,7 @@ const NAV = [
   { to: "/applications", label: "Applications" },
   { to: "/case-studies", label: "Success Stories" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/contact", label: "Contact / Quote" },
 ];
 
 export function SiteLayout({ children }: { children: ReactNode }) {
@@ -57,7 +57,6 @@ export function SiteLayout({ children }: { children: ReactNode }) {
                 {n.label}
               </Link>
             ))}
-            <Link to="/contact" className="btn-primary ml-1 sm:ml-3 text-xs sm:text-sm shrink-0">Request a Quote</Link>
           </nav>
         </div>
       </header>

@@ -9,8 +9,9 @@ const NAV = [
   { to: "/applications", label: "Applications" },
   { to: "/case-studies", label: "Success Stories" },
   { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact / Quote" },
 ];
+
+const CTA = { to: "/contact", label: "Contact Us" };
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const [scrolled, setScrolled] = useState(false);

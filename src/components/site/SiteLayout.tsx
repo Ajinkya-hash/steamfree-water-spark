@@ -83,6 +83,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
             <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--aqua)] mb-4">Navigate</div>
             <ul className="space-y-2 text-sm">
               {NAV.map((n) => <li key={n.to}><Link to={n.to} className="hover:text-[var(--aqua)]">{n.label}</Link></li>)}
+              <li><Link to={CTA.to} className="hover:text-[var(--aqua)]">{CTA.label}</Link></li>
             </ul>
           </div>
           <div>

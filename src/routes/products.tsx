@@ -7,6 +7,11 @@ import plate from "@/assets/plate-falling-film.jpg";
 import tubular from "@/assets/tubular-falling-film.jpg";
 import centrifuge from "@/assets/pusher-centrifuge.jpg";
 import hx from "@/assets/heat-exchanger.jpg";
+import atfdAsset from "@/assets/atfd.jpg.asset.json";
+import paddleAsset from "@/assets/paddle-dryer.jpg.asset.json";
+
+const atfd = atfdAsset.url;
+const paddle = paddleAsset.url;
 
 export const Route = createFileRoute("/products")({
   head: () => ({

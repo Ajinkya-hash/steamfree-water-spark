@@ -92,6 +92,34 @@ const PRODUCTS = [
     ],
     use: ["Pre-heat", "Condenser", "Recuperator"],
   },
+  {
+    img: atfd,
+    name: "ATFD — Agitated Thin Film Dryer",
+    code: "P-06",
+    desc: "Vertical agitated thin film dryer for concentrating and drying heat-sensitive, viscous or fouling streams. A high-speed rotor spreads feed as a thin film on the heated wall for short residence time and near-dry discharge downstream of the MVR.",
+    specs: [
+      ["Heat-transfer area", "0.5 – 25 m²"],
+      ["Residence time", "10 – 60 seconds"],
+      ["Feed viscosity", "up to 50,000 cP"],
+      ["Final solids", "up to 95% w/w"],
+      ["MOC", "SS-316L / Hastelloy / Duplex"],
+    ],
+    use: ["ZLD polishing", "Heat-sensitive concentrates", "Pharma / Specialty chemicals"],
+  },
+  {
+    img: paddle,
+    name: "Paddle Dryer",
+    code: "P-07",
+    desc: "Indirect-heated twin-shaft paddle dryer for drying wet cakes, sludges and salts from the crystalliser or centrifuge. Wedge-shaped paddles provide self-cleaning action, high heat-transfer, and dust-free continuous discharge.",
+    specs: [
+      ["Heat-transfer area", "2 – 60 m²"],
+      ["Feed moisture", "20 – 80%"],
+      ["Final moisture", "< 1%"],
+      ["Heating medium", "Steam / hot oil / hot water"],
+      ["MOC", "SS-316L / Duplex / Carbon steel"],
+    ],
+    use: ["Salt drying", "ETP / ZLD sludge", "Chemical crystals"],
+  },
 ];
 
 function Products() {

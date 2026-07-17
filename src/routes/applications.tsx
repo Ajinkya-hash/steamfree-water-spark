@@ -3,14 +3,23 @@ import { useState } from "react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { useReveal } from "@/hooks/use-reveal";
 import { ArrowRight, Droplets, Factory, FlaskConical, Beer, Milk, Newspaper, Car, Shirt, Layers } from "lucide-react";
-import textile from "@/assets/app-textile.jpg";
-import tannery from "@/assets/app-tannery.jpg";
-import food from "@/assets/app-food.jpg";
-import automotive from "@/assets/app-automotive.jpg";
-import chemical from "@/assets/app-chemical.jpg";
-import paper from "@/assets/app-paper.jpg";
-import dairy from "@/assets/app-dairy.jpg";
-import brewery from "@/assets/app-brewery.jpg";
+import textileA from "@/assets/app-textile.jpg.asset.json";
+import tanneryA from "@/assets/app-tannery.jpg.asset.json";
+import foodA from "@/assets/app-food.jpg.asset.json";
+import automotiveA from "@/assets/app-automotive.jpg.asset.json";
+import chemicalA from "@/assets/app-chemical.jpg.asset.json";
+import paperA from "@/assets/app-paper.jpg.asset.json";
+import dairyA from "@/assets/app-dairy.jpg.asset.json";
+import breweryA from "@/assets/app-brewery.jpg.asset.json";
+
+const textile = textileA.url;
+const tannery = tanneryA.url;
+const food = foodA.url;
+const automotive = automotiveA.url;
+const chemical = chemicalA.url;
+const paper = paperA.url;
+const dairy = dairyA.url;
+const brewery = breweryA.url;
 
 export const Route = createFileRoute("/applications")({
   head: () => ({

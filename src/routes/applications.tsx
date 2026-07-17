@@ -12,14 +12,14 @@ import paperA from "@/assets/app-paper.jpg.asset.json";
 import dairyA from "@/assets/app-dairy.jpg.asset.json";
 import breweryA from "@/assets/app-brewery.jpg.asset.json";
 
-const textile = textileA.url;
-const tannery = tanneryA.url;
-const food = foodA.url;
-const automotive = automotiveA.url;
-const chemical = chemicalA.url;
-const paper = paperA.url;
-const dairy = dairyA.url;
-const brewery = breweryA.url;
+const textile = (textileA as { url: string }).url;
+const tannery = (tanneryA as { url: string }).url;
+const food = (foodA as { url: string }).url;
+const automotive = (automotiveA as { url: string }).url;
+const chemical = (chemicalA as { url: string }).url;
+const paper = (paperA as { url: string }).url;
+const dairy = (dairyA as { url: string }).url;
+const brewery = (breweryA as { url: string }).url;
 
 export const Route = createFileRoute("/applications")({
   head: () => ({
